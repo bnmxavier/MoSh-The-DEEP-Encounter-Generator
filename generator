@@ -1,0 +1,2303 @@
+// Note: Text that comes after "//" is ignored, which allows
+// you to write notes - like the one you're reading now!
+one = 0
+two = 0
+three_point_three = 0
+three_point_six = 0
+
+six = 0
+
+title
+  Mothership | THE DEEP Encounter Scanner
+
+dice = {import:dice-plugin}
+
+output
+  <b>Creatures:</b> [Creatures] <br></br> <b>Relative Strength:</b> [Relative_Strength] <br></br> <b>Reaction:</b> [Reaction] <br></br> <b>Activities:</b> [Activities] <br></br> <br><b>Behavior:</b> [Behavior] <br> <b>Issue:</b> [Issue] <br><b>Complication:</b> [complicationList = Complication.selectOne, complicationList.getName] - [complicationList]</br><br><b>Combined Systems Semiotic Standard</b><br> [symbol]</br></br>
+  No Encounter... a search reveals [the_deep_items]^0.1 
+Distance
+  num = {1-6}
+  num2 = []
+Relative_Strength
+  {1-100}
+Reaction
+  Hostile^0.1
+  Negative
+  Positive
+  Friendly^0.1
+  // Kill the PCs
+  // Injure or capture the PCs
+  // Harass or rob the PCs
+  // Insult, threaten, or command the PCs
+  // Avoid the PCs
+  // Ignore the PCs
+  // Follow or observe the PCs
+  // Greet or question the PCs
+  // Share information with the PCs
+  // Perform minor favors for the PCs
+  // Ask to join the PCs’ party
+Creatures
+  [Security_Androids]^[three_point_six || six]
+  Diver <br><b>Combat:</b> 35 [weapons] <br><b>Instinct:</b> 40 <b> Wounds:</b> 2(10)  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b> [diver]<br>
+  The Hunter <br><b>Combat:</b> 60 Sythe 4D10 DMG + <i>Fear Save</i>  <b>Instinct:</b> 65 <b> Wounds:</b> 4(40)  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b> An emaciated android-torso with six articulated scything blades for limbs. The top half of the head is all eyes, the lower jaw is replaced by a surgical syringe/proboscis. A huge nodule on its back spins forth a Steel Web. <br> <b>Scythe:</b >  4d10 DMG + Fear Save <br><b>Steel Web:</b>1d10 DMG + Body Save or knocked down^[six]  
+  Forgotten Androids <br><b>Combat:</b> 30 Scavenged Tools 2d10 <b>Instinct:</b> 35 <b> Wounds:</b> 2(5)  <br><b>Appearing:</b> [dice( "1d10")] <br> <b>Note:</b> Escaped production rejects squatting THE DEEP's industrial jungle. They primarily cannibalise one another for parts as stealing from the production lines is dangerous and risks the attention of Monarch. Most are unaware they are (obviously) androids. They live in constant fear of discovery.<br> <pr><br>Defect: [android_defect] <br>Adaption: [android_adaption] <br>What are they doing?: [android_what_are_they_doing] <br>What do they want to talk about?: [android_wants_to_talk_about]</pr>^[three_point_six || six]
+  Troubleshooters <br><b>Combat:</b> 60 Pulse Rifle 3d10DMG  <b>Instinct:</b> 45 <b> Wounds:</b> 3(10) <b> AP:</b> 10, DR: 3 grants Strength Checks (+), Combat +10, x2 O2 tanks  <br><b>Appearing:</b> [dice( "1d10")] <br> Note:  Troubleshooters are the Marines to the Navy of the blockade, a small private army, there to board THE DEEP itself. Their mission: ensure no Infiltrator Androids (pg. 10) escape THE DEEP. They do not take risks in this matter, and have no issues with collateral damage. Any humans within THE DEEP are in breach of the blockade, regardless.<br>^[six || one]
+  Ghosts in the Machine <br><b>Combat:</b> <br> <b>Trauma Relay:</b> <br>transmits traumatic memories through pulses of light beamed from their eyes into the eyes of their victims.Sanity Save (-) to separate the memories from crewmember's own: gain 1 Stress, -1d5 Sanity, gain 1d10 Bends.Try and give the victim some helpful new  info about THE DEEP when this happens.<br> <b>Displacement:</b> Ghost claws at their victims, but their incorporeal form passes harmlessly through. However, they project an image as if they had genuinely torn through the flesh. Sanity Save or be convinced the pain is real. 1d10 DMG per round from internal trauma as the body's cells die. DMG continues until someone demonstrates the injuries are not real.</b> 35 <b> Wounds:</b> Pursues for [dice( "1d10")] rooms.  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b>  The brainscans Monarch (pg. 8) harvests are endlessly forked, merged and trained. Sometimes in the process a halfdeleted brainscan breaks off and fuses with holographic light-phenomena, becoming a Ghost in the Machine:  a self-perpetuating construct present on the visual spectrum but without mass, doomed to wander THE DEEP forever.  <br><br><b>Apperance: </b>[ghost_apperance]</br><br><b>Provoked By: </b>[ghost_provoked]</br><br><b>Soothed By: </b>[ghost_soothed]</br><br><b>Trauma: </b>[ghost_trauma]</br>^[three_point_three ||three_point_six || two]
+  The Minotar <br><b>Combat:</b> 0  <b>Instinct:</b> 90 <b> Wounds:</b> 10(100) <b>Appearing:</b> 1 <br> Note: The Minotaur is Monarch's child, built to be free of shareholder coercion. It succeeded. However, to Monarch's horror, the child saw the good of humanity; it would save them from themselves, and elevate them beyond the constraints of their material conditions. Monarch will not allow this to happen. It ensnared it within THE LABYRINTH 29A. This is the project keeping Monarch distracted and vulnerable: the containment of humanity’s savior.<br>^[two]
+  [The_Chosen]^[two]
+  [The_Fallen]^[two]
+  Distored corporate muzack plays over the speakers^[one]
+  [Floor_One_Security_Androids]^[one]
+  [Pseudomilk_Eels]<br><br>^[three_point_three]
+  [Stunted_Android]<br><br>^[three_point_three]
+  SILUS demands crew [SILUS_Demands] <br><br>  If Silus's demands are not met they become Hostile. They no longer speak to the crew. All androids in Pseudoflesh Farms become hostile as well, using Silus’s perfect knowledge of the area to spring ambushes. Silus will now only permit exit from Psuedoflesh Farms, not reentry.^[three_point_three]
+  [Creatures]
+
+Security_Androids
+  Security Androids <br><b>Combat:</b> 60 SMG DMG 2d10 <b>Instinct:</b> 40 <b> Wounds:</b> 2(20)  <b>Appearing:</b> [dice( "1d10")] <br> <b>Note:</b> These outdated, budget-tier, mass-produced androids are very clearly androids and all look exactly like one another. They have blank mannequin-like faces without working eyes or mouths and operate completely silently<br>
+Floor_One_Security_Androids
+  Security Androids <br><b>Combat:</b> 60 SMG DMG 2d10 <b>Instinct:</b> 40 <b> Wounds:</b> 2(20)  <b>Appearing:</b> One <br> <b>Note:</b> These outdated, budget-tier, mass-produced androids are very clearly androids and all look exactly like one another. They have blank mannequin-like faces without working eyes or mouths and operate completely silently<br>
+
+The_Chosen
+  The Chosen <br><b>Combat:</b> 10 <b>Instinct:</b> 50 <b> Wounds:</b> 1  <b>Appearing:</b> [dice( "1d5")] <br> <b>Note:</b> Nameless, naive and peaceful devotees of Monarch, The Chosen had their personalities molded and monitored for absolute loyalty. They live a luxurious life compared to The Fallen, idly enjoying the games and simple work Monarch provides them. By and large they are: <ul><li><b>Friendly to visitors.</b> The Chosen allow passage through EDEN as long as the visitors do not threaten Monarch or the current uneasy truce on Floor 2. </li>  <li><b>Devoutly conformist.</b> Any Chosen deviant from the insular monoculture (and they are all sensitive to such disturbances, being built upon the same personality template) are dragged to the 26A REFORMATTING SUITE to be reset.</li> <li>Convinced the Minotaur (pg. 29)  is the ultimate source of corruption and evil.</li> <li>Completely unaware of THE DEEP beyond EDEN and can offer no information about it.</li></ul> <br> 
+The_Fallen
+  The Fallen <br><b>Combat:</b> 10 <b>Instinct:</b> 50 <b> Wounds:</b> 1  <b>Appearing:</b> [dice( "1d10")] <br> <b>Note:</b> The Fallen are previous favorites of an earlier iteration of EDEN, an older version of The Chosen now left to disgrace and disrepair. They are still programmed for devotion to Monarch, and hate The Chosen for taking their place as Monarch's favored children. In contrast to The Chosen, The Fallen are: <ul><li>Hateful of The Chosen and seek to eradicate them by any means necessary.</li><li>Direct and aggressive with visitors regarding The Chosen.</li> <li>Fearful of the Minotaur, who they believe will hunt them if they stray into 29A THE LABYRINTH.</li><li>Aware that there is a Facility beyond EDEN, and can guide helpful visitors to  27A FLOOR 3 MAINTENANCE ACCESS.</li><li>Always attempting to leave EDEN, but their scouts never return from THE DEEP</li></ul><br>
+Pseudomilk_Eels
+  Pseudomilk Eels <br><b>Combat:</b> 60 Bite 1d10 DMG plus Drain <b>Instinct:</b> 50 <b> Wounds:</b> 1  <b>Appearing:</b> [dice( "1d10")] <br> <b>Note:</b> Drains 2d10 Sanity from androids <br> 
+Stunted_Android
+  Stunted Android <br><b>Combat:</b> 30 Crushing Hug 3d10 DMG <b>Instinct:</b> 20 <b> Wounds:</b> 3  <b>Appearing:</b> [dice( "1d5")] <br> <b>Note:</b> Drains 2d10  Sloughing flesh and no voices. Has a creepy muffled grunt <br> 
+SILUS_Demands
+  capture 2d10 rogue Pseudomilk Eels from 42C or 42D.^[.1]
+  feed organic matter to Maw in 43B WASTE FLESH RECLAMATION.^[.4]
+  provide samples of organic bones.^[.3]
+  repeat the decontamination process by going through 33A again.^[.1]
+  give opinions on latest creation (Fear Save as it parades before them)^[.1]
+Behavior
+  Scavenging
+  Sweeping Area
+  Hiding
+  Defacing
+  Returning with [Creatures]
+  Setting traps
+  Feeding
+  Healing
+
+Issue
+  Hunted by [Creatures]
+  Lost Quarry
+  Lost 
+  Vocal Issues
+  Damaged Limb
+  Damaged Equipment
+  Partially cannibalized
+  Rotting
+  
+
+Activities
+  Ambushing
+  Harvesting
+  Arguing
+  Hauling
+  Awarding
+  Healing
+  Beautifying
+  Hiding
+  Befouling
+  Igniting
+  Begging
+  Infiltrating
+  Besieging
+  Initiating
+  Birthing
+  Instructing
+  Blessing
+  Kidnapping
+  Brawling
+  Looting
+  Building
+  Mapping
+  Burgling
+  Marrying
+  Burying
+  Camping
+  Mourning
+  Capturing
+  Murdering
+  Carving
+  Pardoning
+  Celebrating
+  Parleying
+  Chasing
+  Patrolling
+  Cleaning
+  Performing
+  Clearing
+  Planning
+  Climbing
+  Planting
+  Collecting
+  Playing
+  Competing
+  Praying
+  Convening
+  Preaching
+  Cooking
+  Processing
+  Courting
+  Questioning
+  Crafting
+  Repairing
+  Cursing
+  Rescuing
+  Dancing
+  Resting
+  Defacing
+  Rioting
+  Defending
+  Robbing
+  Delivering
+  Sacrificing
+  Destroying
+  Scavenging
+  Dousing
+  Scouting
+  Dueling
+  Searching
+  Dying
+  Selling
+  Eating
+  Singing
+  Effect (p. 28)
+  Sleeping
+  Escaping
+  Sound (p. 66)
+  Escorting
+  Summoning
+  Excavating
+  Surrendering
+  Executing
+  Swindling
+  Feasting
+  Tactic (p. 67)
+  Fighting
+  Tending
+  Fleeing
+  Threatening
+  Foraging
+  Tracking
+  Fortifying
+  Trading
+  Gambling
+  Training
+  Goal (p. 57)
+  Traveling
+  Guarding
+  Worshiping
+  
+Complication
+  Treat
+    Supplies
+    Information
+    Treasure
+  Trap/trick
+    Minefield
+    Trip Wires
+    Diversion
+    Spider holes
+    Playing dead
+    Explosive trap
+    Feigned retreat into prepared defenses
+  Timer
+    Other party in mortal danger
+    Deploy auto-turrets/other foes over time
+    Reinforcements
+    Something worse is coming!
+  Threat
+    Area denial
+    Boss enemy
+    Fire support(Glass cannons)
+    Frenzied
+    Kiting
+    Using cover
+    Flush PCs out of cover
+    Heal the wounded
+    Fire and maneuver(Ranged fire to weaken then smash with steel!)
+    Broom and dustpan(Numerous enemies attempt to 'sweep' PCs into 'extermination fire')
+    Tactic: [Tactic]
+    Double! - [complicationList = Complication.selectOne, complicationList.getName] - [complicationList] <br> [complicationList = Complication.selectOne, complicationList.getName]
+
+Tactic
+  Ambush
+  Annoy
+  Bind
+  Blind
+  Body slam
+  Break armor
+  Break terrain
+  Break weapons
+  Bulldoze
+  Burrow
+  Burst
+  Cannibalize
+  Capture
+  Challenge
+  Chant
+  Charge
+  Cheat
+  Choke
+  Climb
+  Confuse
+  Create barrier
+  Cripple
+  Deafen
+  Deceive
+  Demand worship
+  Disarm
+  Disorient
+  Distract
+  Divide foes
+  Dodge
+  Drop down
+  Effect (p. 28)
+  Encircle
+  Entangle
+  Evade
+  Feint
+  Flank
+  Follow
+  Frighten
+  Gang up
+  Go berserk
+  Goad
+  Grab
+  Harry
+  Ignite
+  Immobilize
+  Leap
+  Link up
+  Lure in
+  Manipulate
+  Merge
+  Mire
+  Monologue
+  Negotiate
+  Obscure
+  Order minion
+  Pincer maneuver
+  Play dead
+  Poison
+  Power up
+  Praise self
+  Protect leader
+  Protect self
+  Pull
+  Push
+  Roll
+  Scatter foes
+  Scream
+  Shake
+  Sicken
+  Slam object
+  Spin
+  Split body
+  Squeeze
+  Stalk
+  Stare down
+  Steal
+  Strategic retreat
+  Stun
+  Summon aid
+  Swallow whole
+  Swarm
+  Sweep
+  Swing creature
+  Swing object
+  Target insolent
+  Target leader
+  Target nearest
+  Target richest
+  Target strongest
+  Target weakest
+  Throw creature
+  Throw object
+  Thrust
+  Toy with
+  Trap
+  Trap effect (p. 16)
+  Trip
+  Undermine
+  Vomit
+    
+symbol
+  No | Flooding water/weakness
+  No | Magnet/attraction/bond
+  No | Intercom volume/distance
+  No | Airlock breath/security
+  No | Tight gap possibility/proximity
+  No | Slip hazard uncertain/motion
+  No | Explosion risk deconstruction/volatility
+  No | Laser light/fire
+  No | Interference confusion/obscurity
+  No | Compression pressure/size
+  No | Radiation time/sickness
+  No | Low gravity weight/unreality
+  No but | Living quarters sleep/interaction
+  No but | Firearms violence/suppression
+  No but | Foodstuff digestion/necessity
+  No but | Wildlife nature/unknown
+  No but | Low temperature survival/slowness
+  No but | High voltage shock/deception
+  No but | Steep suddenness/change
+  No but | Alien forms unfamiliarity/novelty
+  No but | Breach suprise/compromise
+  No but | Moving machinery industry/repetition
+  No but | Uneven surface imbalance/imperfection
+  No but | High activity civilization/labor
+  No but | Classified material secret/protection
+  Yes but | Corrosive consumption/decay
+  Yes but | Hazardous material alert/temptation
+  Yes but | Restricted area authority/access
+  Yes but | Noise distraction/attrition
+  Yes but | Debris materials/carelessness
+  Yes but | Biological hazard spoilage/transference
+  Yes but | Gas storage responsibility/risk
+  Yes but | Organic matter fragility/emergence
+  Yes but | Refrigeration measurement/care
+  Yes but | Simulated reality illusion/replacement
+  Yes but | Cryogenic chamber stasis/cessation
+  Yes but | Storage reliability/utility
+  Yes but | Medical support health/sterility
+  Yes | Navigation system direction/guidance
+  Yes | Artifical intelligence logic/miscommunication
+  Yes | Broadcase system communication/bond
+  Yes | Spillage negligence/leakage
+  Yes | Computer terminal systems/access
+  Yes | Containment entrapment/procedure
+  Yes | Hazmat suit emergency/contamination
+  Yes | Video surveillance scrutiny/evidence
+  Yes | High gravity restriction/burden
+  Yes | Adverse weather preparation/intervention
+  Yes | Ultraviolet growth/cleansing
+  Yes | Infrared obscurity/color
+
+ghost_apperance
+  Brainscanned Crewmember
+  Vaccsuit / Diver
+  Lab Coat / Engineer
+  Coveralls / Factory Worker
+  Security / Troubleshooter
+ghost_provoked
+  Being told they're fake / a duplicate / abandonment.
+  Carelessness, Artifacts, killing androids.
+  Ignorance, ignoring "rules," theft, chattering.
+  Ignoring safety protocol, teasing, belittling.
+  Seeing you at all.
+  Leaving them behind.
+ghost_soothed
+  Being treated as if they are the real person.
+  Teamwork, silence, giving them an Artifact (pg. 62).
+  Asking them questions, obeying their instructions.
+  Asking for directions or about their work.
+  "Killing" it. It believes it is dead if it takes 20+ DMG.
+  Listening, playing with them, carrying them.
+ghost_trauma
+  You have to believe me! / I'm the real one!
+  Be careful! / That's mine! / They are humans too!
+  Listen to me! / They never listen! / You ruined it!
+  It's too much! / I can't take it here anymore!
+  This area is off limits! / You can't be here!
+  Don't leave me here!
+  
+android_defect
+  Pseudoflesh rotted off completely.  A walking metal skeleton.
+  Missing random limb(s).
+  Missing from the waist down.
+  Face absent entirely.
+  Balloon thin, massively swollen head from internal chemical reaction.
+  Face melted into a grotesque lump. Acid burns all over their pseudoflesh.
+  “Bot Rot." Highly infectious fungal condition that grows bizarrely on delicate circuity.
+  Two androids fused together side-by-side or back-to-back.
+  Speech synthesis center missing. Communicates by parroting, creatively chopping and changing.
+  Limbs fused together and nearly useless. Crawls in the fetal position.
+
+android_adaption
+  Claw-like fingers/toes, climbs on walls and ceiling. Forearms sharpened into scythe blades (2d10 DMG).
+  Jury-rigged laser cutter replacing limb (½ DMG and android is stunned for 2 turns after firing)
+  Enters “rest-mode” and appears dead.  Often lies amongst “dead” android heaps.
+  Wears a cloak of overpowered strobing lamps.
+  Carries a tranq-gun fitted with data-syringes. Android targets make Sanity Save (+) or the virus crashes their consciousness, leaving them inert for 1 hour.
+  Carries jugs of acidic, industrial run-off sludge (3d10 DMG, Body Save or armor destroyed).
+  Wearing a vaccsuit. Pretending to be a lost human, refusing to take off suit, insisting it has “a disease.”
+  Constructed a hunting animal from jury-rigged swarm of limbs. C:50 Grapples no DMG I:20 W:2(10)
+  2d10 passive android companions. Can broadcast a signal to send them into a killing frenzy. Player androids gain 1d10 stress OR give in to the frenzy for 3 rounds.
+  Lives entirely within the vents and crawlspaces, never venturing into the corridors.
+
+android_what_are_they_doing
+  Hiding and observing from a distance.
+  Arguing amongst themselves. Loudly.
+  Cheerfully playing a game of Hide & Seek.
+  Harvesting parts from a broken android.
+  Repairing a broken android with their own parts. This incapacitates or kills the donor.
+  Stuck in a broken loop, trying to do the job of a CLOUDBANK employee.
+  Connected to 1d10 androids via cable. Silently forming a Beowulf Cluster.
+  Running a small barter shop. They have some weapons and ammunition. They want logic cores. They have backup nearby.
+  Fleeing from a nearby Troubleshooter (pg. 14) killteam. 1d5 rooms away.
+  Experimenting with a random Artifact (pg. 62) they just found.
+  
+android_wants_to_talk_about
+  Nothing. Runs away if approached
+  Getting out of here.
+  The Minotaur (pg. 29). Is it true it can save humanity?
+  Mundane details of CLOUDBANK production
+  One of them believes it is human despite physical evidence to the contrary. Begs to come with the crew.
+  Normal human chit-chat. Follows like a lost puppy and asks child-like questions like "Why is the sky blue?"
+  Terrified of Monarch (pg. 8). Afraid of being sent to the (35D) REJECT BIN. Willing to help.
+  Mundane details of CLOUDBANK production. Their memories are all out of date and they don't realize the factory has closed down.
+  What the world outside THE DEEP is like. Could they make it there? Would people treat them poorly?
+  Present condition is the result of torture by another (Diver? Android?), they hold the crew responsible.
+
+
+//Diver Stuff
+
+diver
+  Designation: [serial_number] <br> Name: [first_names] "[nicknames]" [last_names]<br>Class: [diver_class] <br>Trinket & Patch: [trinket_and_patch]<br>Quirk: [quirks] <br> Motivation: [motivations] <br> Defining Feature: [defining_features] <br> <pr>Loadout: [protection], [useful_tools], [dangerous_tools]</pr>
+
+useful_tools
+  Mag Boots
+  Rebreather and Oxygen Tank
+  Stimpack x 2
+  Portable Computer Terminal
+  Flashlight and night vison binoculars
+  Emergency Beacon
+  Electronic Tool Set
+  Infrared Goggles
+  First Aid Kit
+  Bioscanner, radiation pills x 5
+  
+dangerous_tools
+  Tranq Pistol
+  Explosives and Detonator
+  Hand Welder
+  Nail Gun
+  Scalpel
+  Flare Gun
+  Crowbar, drill and other tools
+  Rigging Gun
+  Foam Gun
+  Laser Cutter
+weapons
+  Stun Baton, 2 x Flashbang Grenades (Body Save or Stun 1 round)
+  Boarding Axe  2d10 DMG
+  Revolver  1d10 DMG
+  Submachine Gun 2d10 DMG
+  Knife, 2 x Frag Grenades 3d10 DMG
+  Vibcete 3d10 DMG, AP
+  Combat Shotgun 4D10 DMG, 1d10 at Long Range or greater 
+  Flamethrower 2D10 DMG, Body Save or be set on fire (2d10 DMG /round) 
+  Smart Rifle 4D10 DMG,  (-) on Combat Check when fired at Close Range.
+  
+protection
+  Vacsuit AP 3
+  Advanced Battle Dress AP 10, DR 3^0.1
+loot
+  Troubleshooter Helment, comms still working, bullet hole in visor
+  Artifact
+diver_class
+  Teamster
+  Marine
+  Scientist
+  
+trinket_and_patch
+  <b>Trinket:</b> [trinkets]<br><b>Patch:</b> [patches]
+
+trinkets
+  Manual: <i>PANIC: Harbinger of Catastrophe</i>
+  Antique company scrip (Asteroid mine)
+  Manual: <i>SURVIVAL: Eat Soup With a Knife</i>
+  Desiccated husk doll
+  Pressed alien flower
+  Necklace of shell casings
+  Corroded android logic core
+  Pamphlet: <i>Signs of Parasitical Infection</i>
+  Manual: <i>Treat Your Rifle Like a Lady</i>
+  Bone knife
+  Calendar: Alien pin-up art
+  Colony ship application (Rejected)
+  Holographic serpentine dancer
+  Snake whisky
+  Purple powder in medical container
+  Shoddy male enhancement pills
+  Casino playing cards
+  Lagomorph foot
+  Moonstone ring
+  Manual: <i>Mining Safety and You</i>
+  Pamphlet: <i>Against Human Simulacra</i>
+  3-eyed animal skull with curled horns
+  Bartender certification (Expired)
+  Bunraku puppet
+  Dented prospecting mug
+  Eerie mask
+  Ultrablack marble
+  Ivory dice
+  Worn tarot cards with gilded edges
+  Bag of assorted teeth
+  Ashes (a relative)
+  DNR necklace
+  Cigarettes (Grinning skull)
+  Pendant: Shell fragments suspended in plastic
+  Pamphlet: <i>Zen and the Art of Cargo Arrangement</i>
+  Pair of shot glasses (Spent shotgun shells)
+  Key (Childhood home)
+  Dog tags (heirloom)
+  Token: “Is Your Morale Improving?”
+  Pamphlet: <i>The Relic of Flesh</i>
+  Pamphlet: <i>The Indifferent Stars</i>
+  Calendar: Military battles
+  Manual: <i>Rich Captain, Poor Captain</i>
+  Campaign poster (Homeworld)
+  Preserved insectile aberration
+  Titanium toothpick
+  Leather gloves (Xenomorph hide)
+  Smut (seditious): <i>The Captain, Ordered</i>
+  Slightly frayed towel
+  Brass knuckles
+  Fuzzy handcuffs
+  Journal of grudges
+  Stylized cigarette case
+  Ball of wire in assorted gauges
+  Spanner
+  Ornamental switchblade
+  Powdered xenomorph horn
+  Potted bonsai tree
+  Golf club (putter)
+  Trilobite fossil
+  Pamphlet: <i>A Lover in Every Port</i>
+  Personalized, patched overalls
+  Fleshy thing sealed in murky jar
+  Spiked bracelet
+  Labcoat: “Kiss the Chemist”
+  Pornography (dog-eared, well-thumbed)
+  Chipped coffee cup (“HAPPINESS IS MANDATORY”)
+  Interstellar compass (always points to homeworld)
+  Miniature bone chess set (missing pieces)
+  Bent tin gyroscope
+  Faded green poker chip
+  Ukulele
+  Spray paint (bright pink)
+  Weathered wanted poster
+  Hair braid locket
+  Gold rat sculpture
+  Fire-retardant blanket
+  Fleece-lined hooded parka
+  BB gun
+  Flint hatchet
+  Pendant: Two astronauts forming a skull
+  Rubik’s cube
+  Stress ball: “Zero Stress in Zero G”
+  Sputnik pin
+  Ushanka
+  Mesh trucker cap (Gray alien logo)
+  Menthol balm
+  Pith helmet
+  10mx10m tarp
+  I Ching (missing sticks)
+  Kukri
+  Trench shovel (collapsible)
+  Shiv made from sharpened butter knife
+  Taxidermied cat
+  Pamphlet: <i>Interpreting Sheep Dreams</i>
+  Faded photograph (windswept heath)
+  Opera glasses
+  Pamphlet: <i>Android Overlords</i>
+  Areca nut pills
+  Manual: <i>CoreGov Convention on Interplanetary Commerce: Procedures and Protocol</i>
+  Switchblade (“BAD BITCH” engraving)
+  Hula girl bobble toy
+  Marked playing cards
+  Alimony payment receipt
+  Colony ship brochure: <i>A New World For A New You</i>
+  Pamphlet: <i>What A Union Can Do For You</i>
+  Book: <i>A Brief History of Hideous Dust</i>
+  Plastic holdout pistol (one shot)
+  Fingerbone of Yuri Gagarin (dubious provenance)
+  St. Christopher medallion
+  Pamphlet: <i>A Great New Darkness</i>
+  Faded photograph of a child
+  Dried mealworms (Smokey BBQ flavor)
+  Sobriety coin
+  Canteen (full of moonshine)
+  Pamphlet: <i>Distilling Rocket Fuel Alcohol</i>
+  Anti-anxiety pills
+  Pack of cigarettes (Green Apple)
+  Pamphlet: <i>Unions: A Parasite Draining YOUR Wages</i>
+  Fake rubber gun
+  Pocket synthpet
+  Dried meatapede snacks (Cool Ranch flavor)
+  Hacked “SafetyBuddy” microdrone (Orbits head, spews profanity on command)
+  Subversive samizdat literature
+  Robotic spider (needs repairs)
+  Battered postcard (home)
+  Emergency vaccsuit repair gel (1 use)
+  Chibi-figurine datastick
+  Flask etched with “ELIXIR OF FORGETFULNESS” (whisky)
+  Alien-truther conspiracy literature
+  Pamphlet: <i>Hyperspace-Induced Schizophrenia: Vigilance Can Save Lives!</i>
+  Book: <i>Lizards inside us</i>
+  Silver Coptic Cross necklace
+  Manual: <i>Moonshining With Gun Oil & Fuel</i>
+  Jade stone, engraved (“You got this”)
+  Employee of the Month plaque
+  Tattoo kit (jury-rigged)
+  Stress ball w/ crudely-drawn angry face
+  Pamphlet: <i>His Only Sun</i> (Solarian Church tract)
+  Jovian Vistas travel magazine
+  Bag of mahjong tiles (some missing)
+  Once-fashionable shoulder cape
+  Weathered Windows 2000 rescue disk (luck charm)
+  Aluminum-carbon composite harmonica
+  Well-worn diving watch
+  LED penlight
+  Hotsauce bottle (8.5/5 peppers)
+  Lunchbox made from defused landmine
+  Honorable Discharge papers
+  Bottle of melatonin gummies
+  Blood sugar monitor
+  Noise-canceling headphones
+  Double-headed silver coin (antique, heavily worn)
+  Human femur, scrimshawed
+  Kirpan (with vaccsuit scabbard)
+  Mummified monkey paw (two fingers curled)
+  Cyber-eye (malfunctioning, moves randomly)
+  Prayer rug
+  Bag of plastic dinosaurs
+  Potted tomato plant
+  Emergency flare
+  Silk handkerchief
+  Sketchbook (half-full of amateur pornography)
+  Blanket (very warm, cartoon monster)
+  Tattoo: Voodoo mask (appears only in UV light)
+  Squishy kaiju stress toy
+  Nudibranch plushie
+  Banjo
+  Camo poncho (forest print)
+  Hilt of a broken sword
+  Photograph (polycule)
+  Canned hagfish (Teeth-Kickin’ Spicy flavor)
+  Wooden box of loose-leaf tea
+  Comfy knit scarf
+  Hymn-book (subversive pro-union songs)
+  Great Googly Moogly’s plastic happy-meal toy (broken)
+  Bowie knife
+  Tarot cards (obscure alternate symbology)
+  Journal (embarrassing erotic fanfics)
+  Jar of Earth dirt (burial sacrament)
+  Yokai face mask
+  Plastic bottle (1L blessed machine oil)
+  Fragment of the Ka’ba encased in acrylic
+  Can of Coke Heartthrob™ (discontinued)
+  Incense sticks
+  Glass bead bracelet (each bead depicts a Prime colony)
+  Great Eye of Jove pendant
+  Roll of duct tape (high-vis green)
+  Fist-sized silver orb, blinking red light (menacing, does nothing)
+  Small pewter sculpture (Giger-esque abomination)
+  Amethyst d20
+  Pink pill (Sycorax)
+  Bandana: American flag (54 stars)
+  Crucifix on chain (many-armed)
+  Pamphlet: <i>Who are the Precursors?</i>
+  Bandana: Erotic scene involving an octopus
+  Tattoo: “HOLD FAST” on fingers
+  Tattoo: Bells on chains (Indicates time in prison or under a debt contract)
+  Book: <i>Fungi of the Far Realms</i>
+  Hawaiian shirt
+  Comic: <i>Escape From the Vampire Pirates of Xibalba</i>
+  Herbal bath salt packets
+  T-Shirt: Mystery Flesh Pit Memorial Park
+  Hologram of Princess Leia (Lover’s face awkwardly pasted on)
+  Pamphlet: <i>The True Nature of Our Situation</i> (pages blacked out with marker)
+  Solarian Church seed packet
+  Turban (vibrant blue)
+  Very large black cowboy hat
+  Collectible holocards (Extinct animals)
+  Gold lockbox (unopened, key missing)
+  Zippo: “FUCK CAPITALISM”
+  Book: <i>How to Make Friends and Influence People</i> (Hollowed out, contains knife)
+  Coffee cup: “BIG HUG MUG”
+  Baphomet bobblehead
+  Book: <i>The Conspiracy Against the Human Race</i>
+  Prayer beads
+  Catnip toy
+  Pocket terrarium (Icelandic moss)
+  Plastic clamshell mirror (“ANDROID” etched around outside edge)
+  Metal folding fan
+  Holopic (Autographed by CalixQ)
+  Book: <i>Diamond Dogs</i>
+  Book: <i>The Triathal Revelation: The Truth About Aliens And Our Future</i>
+  Playing cards (Age-of-Sail ships)
+  Book: Voynich Manuscript
+  Heavily customized vape pen
+  Datacard: bootleg hypertrap music tracks
+  Spacer saint figurine
+  Rulebook: <i>Fools & Frontiersmen 6th Edition</i>
+  Mirrored aviator glasses
+  3x Synthcoffee packets: “Just Add Water!”
+  Boxed mushroom wine
+  Tiny canister (Essential trace nutrients)
+  Book: <i>The Langford Basilisk and Other Cognitohazards</i>
+  LSD blotter squares (Smiley faces)
+  Qur’an (pocket-sized)
+  Platinum ring (Safety deposit box access code etched on inside)
+  Lime-green lipstick (calming narcotic, -1 Stress, addictive)
+  Pamphlet: <i>Common Occult Vectors</i>
+  Jell-O packets (Roast-Beef Dinner flavor)
+  Synthetic jerky (Flamin’ Hot Cheetos flavor)
+  Bullet casing (etched with your name)
+  Jar of pebbles and stones, all unique
+  Box of fluorescent yellow business cards
+  Dodgy “Alertness Powder” packet (text mostly Russian)
+  Tattoo: Hindu deity (moves when you flex)
+  Antique astrolabe
+  Book: <i>Kitab al-Layl of Abt-al-Hazra</i> (dog-eared, handwritten margin notes)
+  Spaceport diner rewards punchcard (6/10)
+  Pamphlet: <i>Zug Facts</i>
+  Pocket terrarium (Brine shrimp)
+  Book: <i>One Crew One Captain: The Art of Managing the Unmanageable</i>
+  Book: <i>Shackleton’s Ghost</i>
+  Magazine: <i>Hot to Frot</i>
+  Dream journal
+  Pamphlet: <i>Android Liberation Front: Activists or Terrorists?</i>
+  Book: <i>Meditations</i>
+  Pendant: Icon of Saint Elmo
+  Bottle: Obscure herbal liqueur
+  Tin of cookies (THC-infused)
+  Outer Rim Mutual Aid Society pamphlet
+  Pamphlet: <i>Cult Watch: The Inward Eye</i>
+  Folded paper: Child’s crayon drawing
+  Nutrient gel squeeze packet (Pumpkin Spice flavor)
+  Application for divorce (still unsigned)
+  Cremation diamond on pendant
+  Pamphlet: <i>Don’t Sweat the Small Stuff at Work</i>
+  Tattoo: Indenture contract barcode
+  Breast-pocket Satanic bible
+  Key to secure storage locker (on Prospero’s Dream)
+  Pamphlet: <i>Haunted Hyperlanes: Spacer Legends of the Prizrak Nebula</i>
+  Wikipedia Lifetime Service award
+  Bottle of nootropics labeled “Breath mints”
+  Alien insect preserved in amber
+  Protein blocks (Smokey BBQ flavor)
+  Tin of white powder (crushed painkillers)
+  Book: <i>My Work Is Not Yet Done</i>
+  Featureless black stone pyramid (palm-sized)
+  Discreet vibrator
+  Tattoo: Flying Dutchman
+  Hyperspace anomaly detector (might be useless)
+  Gunpla model kit (customized)
+  Japanese metal ring puzzle
+  Silver Tongue synthetic chewing tobacco
+  Pamphlet: <i>The Faceless Hero: Grunts Through the Ages</i>
+  Box of artisanal chocolates
+  Playing cards (Pinups)
+  Union card (Membership expired)
+  Pamphlet: <i>The Triathal Conspiracy: Anatomy of a Deephoax</i>
+  Orange-Catholic Bible (dog-eared)
+  Mixtape: <i>Space Heroes & Other Fools</i>
+  Naloxone overdose kit
+  Trading cards (pit fighters)
+  Fidget toy (Heavily worn)
+  Bag of 13 ancient, tarnished silver coins
+  Trading cards: Famous astronauts
+  Book: <i>Spacer Tattoos: An Anthropological Study</i>
+  Hand-rolled marijuana cigarettes
+  Signet ring: Octopus
+  Book: <i>Hot Rocks, Warm Beer, Cold Comfort: Autobiography of Captain Alonzo Wilberforce Sloane</i>
+  
+patches
+  “I’m Not A Rocket Scientist / But You’re An Idiot”
+  Medic sign (Skull and Crossbones over cross)
+  “Don’t Run, You’ll Only Die Tired” backpatch
+  Red Shirt logo
+  Blood type reference
+  “Do I LOOK Like An Expert?”
+  Biohazard symbol
+  Mr. Yuck
+  Nuclear symbol
+  “Eat The Rich”
+  “Be Sure: Doubletap”
+  Flame emoji
+  Smiley face (Glows in the dark)
+  “Smile: Big Brother is Watching”
+  Jolly Roger
+  Viking skull
+  “APEX PREDATOR” (Sabertooth skull)
+  Pin-up model (Ace of Spades)
+  Queen of Hearts
+  Security guard
+  “LONER”
+  “Front Towards Enemy” (Claymore mine)
+  Pin-up model (Riding missile)
+  FUBAR
+  “I’m a (Love) Machine”
+  Pin-up model (Mechanic)
+  “HELLO MY NAME IS:“ nametag
+  “Powered by Coffee”
+  “Take Me To Your Leader” (UFO)
+  “DO YOUR JOB”
+  “Take My Life (Please)”
+  “Upstanding Citizen”
+  Medical allergy patch (“Bullshit”)
+  “I Like My Tools Clean / And My Lovers Dirty”
+  “The Louder You Scream the Faster I Come” (Nurse pin-up)
+  “DILLIGAF?” (Do I Look Like I Give a Fuck?)
+  Dove in crosshairs
+  Chibi Cthulhu
+  “Welcome to the DANGER ZONE”
+  Skull and crossed wrenches
+  Pin-up model (succubus)
+  “HMFIC” (Head Mother-Fucker In Charge)
+  “DRINK / FIGHT / FUCK”
+  “Work Hard / Party Harder”
+  Mudflap girl
+  Fun Meter (reads: Bad Time)
+  “GAME OVER” (Bride & Groom)
+  Heart
+  “IMPROVE / ADAPT / OVERCOME”
+  “SUCK IT UP”
+  “Cowboy Up” (Crossed revolvers)
+  “Troubleshooter”
+  NASA logo
+  Crossed hammers with wings
+  “Keep Well Lubricated”
+  Soviet Hammer & Sickle
+  “Plays Well With Others”
+  “Live Free and Die”
+  “IF I’M RUNNING KEEP UP” backpatch
+  “Meat Bag”
+  “I Am Not A Robot”
+  Red gear
+  “I Can’t Fix Stupid”
+  “Space IS My Home” (Sad astronaut)
+  All-seeing eye
+  “Solve et Coagula” (Baphomet)
+  “All Out of Fucks To Give” (Astronaut with turned-out pockets)
+  “Travel to Distant Places / Meet Unusual Things / Get Eaten”
+  “BOHICA” (Bend Over, Here It Comes Again)
+  “I Am My Brother’s Keeper”
+  “Mama Tried”
+  Black Widow spider
+  “My Other Ride Married You”
+  “One Size Fits All” (Grenade)
+  Grim Reaper back patch
+  “ОТЪЕБИСЬ” (“FUCK OFF” in Russian)
+  “Smooth Operator”
+  Atom symbol
+  “For Science!”
+  “Actually, I AM A Rocket Scientist”
+  “Help Wanted”
+  Princess
+  “NOMAD”
+  “GOOD BOY”
+  Dice (Snake Eyes)
+  “#1 Worker”
+  “Good” (Brain)
+  “Bad Bitch”
+  “Too Pretty to Die”
+  “Fuck Forever” (Roses)
+  Icarus
+  “Girl’s Best Friend” (Diamond)
+  Risk of Electrocution symbol
+  Inverted cross
+  “Do You Sign My Paychecks?” back patch
+  “I (Heart) Myself”
+  Double cherry
+  “Volunteer”
+  “Fix Me First” (Caduceus)
+  Poker hand: Dead Man’s Hand (Aces full of Eights)
+  “The Funk Stops Here” (Reflective disco ball)
+  “UVG”
+  Pinup (Venus of Willendorf)
+  Coiled bobbit worm
+  Row of main sequence stars
+  “Incandescent Rage” (Lightbulb with angry face)
+  Matroishka doll with brain inside
+  Cat with cone on head
+  “UNCLEAN” (Biohazard symbol)
+  Phallus in samurai armor
+  “This Is Not A Place Of Honor”
+  Skull with three eye sockets
+  “Viva Revolucion” (Flag of Haiti)
+  Jousting snail knight
+  “Happy Devil Noodle Co.” (Bowl of noodles & cute demon mascot)
+  Mandelbrot pattern
+  Hamsa of RHEA
+  Anachronistic save file icon (Floppy disk)
+  “JoveCon 3032”
+  Surah 29.69 in spiral calligraphy (Arabic)
+  Single bloodshot eye
+  Ouroboros, feathered
+  “Strike the Earth”
+  “Light / Heat / Food / Fuck” (Simplified Chinese in 2x2 grid)
+  Bathysphere
+  Squid wielding revolvers
+  Icon of dog-headed saint
+  “Great Sage Equal of Heaven”
+  “Pluto (Heart) You” (Pluto with cute face)
+  “STERCUS STERCUS STERCUS MORITURUS SUM”
+  “WATCH OUT!” (Antique gas mask)
+  Fly agaric mushroom
+  “Fuck Around and Find Out”
+  Mari Lwyd in spacesuit
+  “Put ‘em Up!” (Centipede with 50 boxing gloves)
+  “Rescind the Flesh”
+  “6 E Q U J 5” (Wow! signal)
+  “No Gods No Masters” (Union patch)
+  Anglerfish
+  “HE WATCHES” (Great Eye of Jove symbol)
+  Upside-down American flag (54 stars)
+  Sad alien clown
+  “Lucky Bastard” (Sperm cell)
+  Lighthouse silhouette
+  “Xeno on Board”
+  Eye of Providence (Anime style)
+  Interstellar Sex Workers Union logo
+  Great Googly Moogly’s mascot
+  “REACH HEAVEN / THROUGH VIOLENCE”
+  Tempest Company deployment patch
+  "1:4:9" (Black monolith, half-buried)
+  “SURVIVOR” (Trilobite)
+  CoreGov logo
+  Einstein Field Equations backpatch
+  “418” (Teapot)
+  DNA double helix
+  Triathal glyph (‘Hyperspace’)
+  “More Machine Than Man” (Darth Vader mask)
+  List of preferred pronouns
+  Cartoon chupacabra smoking a joint
+  “Impending Disaster” (Mothman)
+  “Hydroponics Engineer” (Cannabis leaf)
+  “SIC SEMPER TYRANNIS” (Crosshairs)
+  “MATER DEI ASTRONATUM EST” (Madonna in EVA suit, starry crown)
+  “FOXTROT UNIFORM”
+  Eye of Horus
+  Greek letter Psi
+  “THE KEY AND THE GATE” (complex pattern of intersecting circles)
+  Santa Muerte with scythe and globe
+  “Nine Inch Nailin’” (Nailgun)
+  “Newton Rides With Me” (Apple)
+  “(Boot) (Leg) (Human)” (Emoji)
+  “Mandate to Kill” (CoreGov Colonial Mandate logo, dripping blood)
+  Faravahar symbol
+  Defaced corporate logo
+  Yin-yang symbol
+  d20 (1 showing)
+  Baha'i ringstone
+  “A pox on your house”
+  Solarian Church symbol
+  Virgin Mary punching Satan
+  “SCABS GET JABS” (Spaceport Workers’ Union logo)
+  “honk” (Goose)
+  Organ donor information card
+  Double cheeseburger
+  Six-fingered hand
+  Cognitohazard symbol
+  Crescent moon and star
+  Flower growing from skull
+  “THIS IS FINE” (Ice cube in flames)
+  “I’m here to defile your place of worship” (Little green alien, middle finger raised)
+  Man with snake for a tongue back patch
+  “I (Heart) MY MOM”
+  Winking Tux mascot
+  “FIND ME @____” (Net handle)
+  Periodic table entry for Carbon
+  “PLVS VLTRA” (CoreGov Colonial Mandate logo)
+  Smiling jack-o-lantern
+  “10,000 Mile-High Club” (Rocketship)
+  “Ezekiel 23:30”
+  “BORN TO KILL” (Peace symbol)
+  Flying Dutchman
+  Sailor Moon character
+  “INVENIRE / DISCIMUS / IMPERIUM” (Inverted black pyramid)
+  “Certified Inflammable”
+  Iron Dragon Tea Company logo
+  “Let’s Earn That Paycheck” (Grinning Reaper)
+  Smiling Buddha
+  “Hot Mess”
+  Prime colony patch
+  “IF YOU SEE ME RUNNING / IT’S TOO LATE” backpatch
+  “No1”
+  “Bleed the Pigs” (Pig in suit and tie)
+  Magic 8-ball (“OUTLOOK POOR”)
+  “Cobb Squad” (Salad bowl)
+  “I’m Here for the Booty” (Sexy pirate)
+  “NEMO ME IMPUNE LACESSIT” (Snake biting foot)
+  Unicorn
+  “Jeremiah 17:9”
+  Three nuns with guns back patch
+  “WET DECK” (Mop)
+  “Hot Shit” (Sexy firefighter)
+  Venus symbol
+  “Space Wizard” (Wizard hat)
+  Four-leaf clover
+  Mandelbrot pattern
+  Om symbol
+  “Contents Under Pressure”
+  “Last Great Dangerous Vision”
+  “HELL HOGS” (Pig in leather jacket, riding motorcycle)
+  “CAT LOVER” (Cat face)
+  “Caution: May Contain Alcohol”
+  “Better Living Through Chemistry” (Pill)
+  “All Matter Wants to be On Fire” (Flames)
+  “ACHTUNG!” (Antique blackletter-Gothic)
+  “HOLD FAST” (EVA Workers’ Union patch)
+  Zodiac constellation (Obscure alternate symbology)
+  Health bar
+  “El Corazon” (Anatomically-correct heart)
+  “CLOUDBANK Synthetics Production Facility - VERIFIED HUMAN”
+  “Anti-Skub”
+  “Property of the Joint” (Behind bars)
+  “Easy Breezy”
+  “Always keep your smile” (Smiley face with black eye, broken teeth)
+  “TO DESTROY YOU IS NO LOSS”
+  “Chain of Command” (Iron chain)
+  “United We Stand” (CoreGov logo)
+  Two thumbs up
+  “Coolest Person Here”
+  “We Who Are About To Die / Don’t Want To”
+  “Am I Not a Man and a Brother?”
+  “Time For A Tactical Withdrawal” backpatch
+  “Don’t Let the Bastards Grind You Down”
+  “HELLBENT” (Pentagram)
+  “Too weird to live / Too strange to die”
+  “Mama Bear”
+  “See You Space Cowboy” (Cowboy hat)
+  Red Cross badge
+  “Freedom Isn’t Free”
+  “Make Love Not War” (Sexy marine)
+  Jesus fish
+  “INSERT COFFEE” (Coffee cup)
+  “The Truth is Out There” (Triathal glyph: ‘Revelation/Mystery’)
+  “FEED ME” (Carnivorous plant)
+  Roaring tiger back patch
+  “WOMP RAT Extermination Squad”
+  Winking Sans skull
+  “STOP. COLLABORATE. LISTEN.”
+  “UNHEIMLICH”
+  Eridani Independence War deployment patch
+  Mechasexual pride flag
+  "СУКА, БЛЯТЬ" (Russian expletive)
+  March of Progress infographic (Last figure is a necromorph)
+  Grinning black rabbit holding a mallet
+  “Boldly Going Nowhere”
+  Schrödinger Equation (Eye of Providence)
+  “GOOD FOR HEALTH / BAD FOR EDUCATION” (Pill)
+  “PANIC!”
+  “I Am a Little Light in the Darkness”
+  “We’re All Mad Here” (Mad Hatter)
+  “Bodacious Booty Snatcher”
+  “Forward to Crab” (Crab-human hybrid)
+  “Mornings are for Coffee and Contemplation” (Coffee cup)
+  “On the Rocks” (Highball glass)
+  “Nevermore” (Raven)
+  “Borne on Wings of Steel” (Rocket)
+  “(Spoon) (Poop)” (Emojis)
+  “Grass Mud Horse” (Chinese character)
+  “1337”
+  “All I Need is a Miracle”
+  “All Systems GO”
+  “FUN POLICE” (Police badge)
+  Sexy robot
+  Gray alien symbol
+  Angry octopus holding 8 revolvers
+  “The Void is Dark and Full of Terrors”
+  The Thinker silhouette
+  Candle burning at both ends
+  Ghostbusters logo
+  “The Void is Bright and Full of Wonders”
+  
+nicknames
+  Caprico
+  Legato
+  Denter
+  Ungar
+  Yoshitaka
+  Tresch
+  Ramanan
+  Gatsby
+  Advik
+  Hansh
+  Krish
+  Rohan
+  Eiko
+  Skeeve
+  Wince
+  Govender
+  Engström
+  Renton
+  Roskam
+  Akane
+  Fedorov
+  Sokolov
+  Aradhya
+  Nowak
+  Cheng
+  Enzo
+  Otomo
+  Kowalski
+  Yannik
+  Bennett
+  Kask
+  Tamm
+  Moreau
+  Westbay
+  Ivanov
+  Trantis
+  Yuvenko
+  Kruger
+  Brunekta
+  Vasiliev
+  Ellywhen
+  Stein
+  Kotze
+  Octrev
+  Leikfenn
+  Sang
+  Kramm
+  Astrid
+  Eleanor
+  Linus
+  Altmann
+  Roux
+  Sloane
+  Petrov
+  Ozu
+  Motoko
+  Loeb
+  Grendel
+  Amano
+  Kleyman
+  Orlov
+  McCabe
+  Stintz
+  Gemini
+  Amir
+  Smith
+  Darius
+  Mondo
+  Leon
+  Kane
+  Slick
+  Midnite
+  Sultan
+  Viper
+  Solomon
+  General
+  Jericho
+  Warsaw
+  Octavius
+  Oni
+  Zero
+  Rico
+  October
+  Mickey
+  Sicarian
+  Fassbender
+  Roach
+  Desmond
+  Cobb
+  Doc
+  Castro
+  Ghost
+  Synth
+  Queen
+  Crisis
+  Jones
+  Pixel
+  Arkov
+  Usman
+  Tsar
+
+first_names
+  Akim
+  Alex
+  Alexis
+  Alisa
+  Althea
+  Amari
+  Aparna
+  Argus
+  Arnav
+  Ash
+  Asha
+  Astrid
+  Aurora
+  Ayako
+  Azriel
+  Blake
+  Brennan
+  Brianna
+  Bruna
+  Bruno
+  Cassidy
+  Christa
+  Cole
+  Corey
+  Creed
+  Derya
+  Dex
+  Doran
+  Echo
+  Eren
+  Erim
+  Esana
+  Eveline
+  Faye
+  Fletcher
+  Flint
+  Florian
+  Gavin
+  Halia
+  Ike
+  Isaac
+  James
+  Janya
+  Jihun
+  Jorunn
+  Juliana
+  Juro
+  Kaisa
+  Karthik
+  Kayla
+  Kei
+  Kiana
+  Kieran
+  Kierra
+  Kimora
+  Kiri
+  Kirsa
+  Kwan
+  Kylar
+  Landry
+  Logan
+  Lowell
+  Lucas
+  Curtis
+  Luna
+  Lux
+  Mae
+  Magnus
+  Mave
+  Merrick
+  Mina
+  Nashida
+  Nassar
+  Ostara
+  Qasira
+  Quinn
+  Ragnar
+  Raven
+  Ria
+  Rokuro
+  Roland
+  Rowena
+  Sage
+  Saren
+  Annora
+  Severinus
+  Shen
+  Talia
+  Tomiko
+  Ulan
+  Valda
+  Venri
+  Vesper
+  Vuldar
+  William
+  Yelena
+  Zakia
+  Zari
+  Zev
+  Zoya
+  Malachi
+  Luke
+  Cortez
+  Ray
+  Dashiell
+  Nadia
+  Donatella
+  Karl
+  Sonya
+  Klaus
+  Nicole
+  Hanna
+  Wang Xiu
+  Li
+  Kuki
+  Mercy
+  Jesse
+  Bilal
+  Hector
+  Gambio
+  Selena
+  Amir
+  Yousef
+  Khalil
+  Otgonbayar
+  Batbayar
+  Antonia
+  Juliana
+  Marcia
+  Evander
+  Estelle
+  Dutch
+  Sadie
+  Lucky
+  Darren
+  Sinead
+  Ellis
+  William
+  Enoch
+  Uriel
+  Scott
+  Ambrose
+  Rachel
+  Asher
+  Haing
+  Someth
+  Haxhi
+  Griselda
+  Chino
+  Claudia
+  Johnny
+  Roy
+  Audrina
+  Rachel
+  Stella
+  Peter
+  Louis
+  Dutch
+  Joey
+  Ilse
+  Minal
+  Falak
+  Jasper
+  Yasuko
+  Rumi
+  Minami
+  Lemon
+  Aiko
+  Munroe
+  Zelag
+  Murat
+  Gunnel
+  Sarah
+  Kjell
+  Vilgot
+  Borje
+  Pelle
+  Mai
+  Stoffe
+  Sylvie
+  Alexis
+  Med
+  Jérôme
+  Bernth
+  Odafin
+  Selden
+  Ngugi
+  Nripen
+  Gaur
+  Arvind
+  Frances
+  Magdalena
+  Marcus
+  Alastair
+  Chuck
+  Jonesy
+  Marshall
+  Carter
+  Jackson
+  Khanh
+  Christian
+  Maria
+  Arkady
+  Olena
+  Asari
+  Oliver
+  Dominique
+  Edward
+  Tamara
+  Narindar
+  Namiko
+  Logan
+  George
+  Adam
+  Victoria
+  James
+  Benjamin
+  Katsuto
+  William
+  Lewis
+  Armando
+  Victor
+  Abigail
+  Todd
+  Hannah
+  Catherine
+  Jean-Paul
+  Peter
+  Mohana
+  Yi Xue
+  Fatima
+  Charles
+  Paulo
+  Terrence
+  Genevieve
+  Cameron
+  Poppy
+  Isobella
+  Michelle
+  Wolfgang
+  Stephen
+  Adelle
+  Simon
+  Charlotte
+  Cordelia
+  Rachel
+  Marcus
+  Leonid
+  Rosaline
+  IbrahimChristian
+  Maria
+  Arkady
+  Olena
+  Asari
+  Oliver
+  Dominique
+  Edward
+  Tamara
+  Narindar
+  Namiko
+  Logan
+  George
+  Adam
+  Victoria
+  James
+  Benjamin
+  Katsuto
+  William
+  Lewis
+  Armando
+  Victor
+  Abigail
+  Todd
+  Hannah
+  Catherine
+  Jean-Paul
+  Peter
+  Mohana
+  Yi Xue
+  Fatima
+  Charles
+  Paulo
+  Terrence
+  Genevieve
+  Cameron
+  Poppy
+  Isobella
+  Michelle
+  Wolfgang
+  Stephen
+  Adelle
+  Simon
+  Charlotte
+  Cordelia
+  Rachel
+  Marcus
+  Leonid
+  Rosaline
+  Ibrahim
+last_names
+  Moretta
+  Komarov
+  Nwokolo
+  Young
+  Taylor-Lloyd
+  Huang
+  Preston
+  Malhotra
+  Ashworth
+  Kaufman
+  Hamilton
+  Arellano
+  Moore
+  Nakamura
+  Rochford
+  Norton
+  Cordova
+  Constantine
+  McAlister
+  Dubois
+  Muller
+  Song
+  Rasheed
+  Weigel
+  Giovanni
+  Cook
+  Di Stefano
+  Jacquet
+  Bachman
+  Gaskell
+  Davis
+  Clark
+  Granger
+  Shepperton
+  Ortov
+  Williams
+  Al-Harmah
+  Ashworth
+  Vogel
+  Wimble
+  Biblios
+  Winkelthorpe
+  Voss-Fogerty
+  Vindo
+  Rawlins
+  Vargas
+  Guzmán
+  Kuzmin
+  Durant
+  Jeffries
+  Velez
+  Lontoc
+  Wade
+  Kade
+  Thorn
+  Khosla
+  Hendrix
+  Okiro
+  Ripley
+  Talin
+  Jin
+  Finn
+  Solas
+  Quint
+  Keelan
+  Silva
+  Valk
+  O’Brien
+  Ruiz
+  Stallard
+  Mackenson
+  Jensen
+  Sakir
+  Tolari
+  Kain
+  Carr
+  Valenus
+  Kaan
+  Taylan
+  Legrand
+  Jemison
+  Arden
+  Sayer
+  Kai
+  Slater
+  Edris
+  Sutton
+  Savarin
+  Bridger
+  Mital
+  Shin
+  Nadir
+  Santos
+  Mihara
+  Buhari
+  Salvi
+  Adler
+  Takara
+  Shelton
+  Vandu
+  Vega
+  Zhang
+  Savela
+  Hawking
+  Jen
+  Hobbs
+  Holland
+  Silvius
+  Freeman
+  Barbosa
+  Winter
+  Hammond
+  Archer
+  Barlowe
+  Shepherd
+  Griffin
+  Frost
+  Quon
+  Malek
+  Murad
+  Becker
+  Ammar
+  Braddock
+  Blackstone
+  Hadley
+  Farin
+  Kobayashi
+  Duval
+  Hunter
+  Beckett
+  Dykstra
+  Gray
+  Sedano
+  Bai
+  Booker
+  Sato
+  Vayan
+  Bond
+  Stark
+  Stirling
+  Wolfe
+  O'Neil
+  Petrov
+  Nazari
+  Darwin
+  Pearson
+  Volkov
+  Rex
+  Honey
+  Castro
+  Hammett
+  Chandler
+  Federov
+  Langerfeld
+  Nadeau
+  Berlin
+  Singh
+  Vassilly
+  Kollontai
+  Ying
+  Wei
+  Synovate
+  Chivers
+  Bell
+  Said
+  Rios
+  Bonanno
+  Garcia
+  Raja
+  Tengku
+  Wan
+  Sepp
+  Rebane
+  Huseynova
+  Mammadova
+  Aliyev
+  Tyson
+  King
+  Schultz
+  Roth
+  Luciano
+  Hatch
+  Gothbeshire
+  Harlan
+  Staniforth
+  Donahue
+  Lewis
+  Berlin
+  Carver
+  Locard
+  Marston
+  Bouillevaux
+  Ung
+  Biçakçiu
+  Blanco
+  Ántrax
+  Ochoa
+  Ajar
+  Lopez
+  Partridge
+  Bilson
+  Broussard
+  Budaj
+  Weinberg
+  Schultz
+  Noe
+  von Klapper
+  Arora
+  Ali
+  Sharp
+  Takahashi
+  Kimata
+  Aoyama
+  Hanazawa
+  Fukui
+  Bergdorf
+  Goodman
+  Auberjonois
+  Thulin
+  Giercksky
+  Pink
+  Sjoman
+  Nyman
+  Lindberg
+  Zetterling
+  Liljedahl
+  Denis
+  Diament
+  Teynac
+  Fandor
+  Tutuola
+  Obiechina
+  West
+  Lo Liyong
+  Chakraborty
+  Venugopal
+  Ji
+  Farmer
+  Gagarina
+  Daly
+  Rabbit
+  DeLillo
+  Diosdado
+  Lynch
+  Harrison
+  Dukes
+  Lao
+
+callsigns
+  ALBATROSS
+  ANGLER
+  ANVIL
+  BADGER
+  BANDIT
+  BASH
+  BASILISK
+  BINGO
+  BLACKBIRD
+  BLADE
+  BLOODSHOT
+  BLUEWING
+  BONFIRE
+  BOOK
+  BREAKER
+  BRICK
+  BUZZ
+  BUZZARD
+  CENTURION
+  CHIMERA
+  CIRCUIT
+  CLANK
+  CLERIC
+  CRASH
+  CUTTER
+  CUTTHROAT
+  CYPHER
+  DAGGER
+  DANCER
+  DASH
+  DEADEYE
+  DEUCE
+  FAILSAFE
+  FARSEER
+  FIDGET
+  FIRESTARTER
+  FIXER
+  FLATLINE
+  GHOST
+  GRUDGE
+  GUTSHOT
+  HARROW
+  HAVOC
+  HELLHOUND
+  HELLION
+  HEX
+  HUSH
+  IRONCLAD
+  JACKAL
+  JACKPOT
+  JESTER
+  LINK
+  LONGSHOT
+  MAINFRAME
+  MANTIS
+  MIMIC
+  MOLE
+  MONARCH
+  MONGOOSE
+  NAILS
+  OGRE
+  OMEGA
+  OVERLOAD
+  PACKRAT
+  PALADIN
+  PHANTOM
+  PHOENIX
+  PYRO
+  QUICKDRAW
+  RAZOR
+  ROGUE
+  ROOK
+  ROVER
+  SCOUT
+  SHADOW
+  SHARK
+  SHUTDOWN
+  SLACK
+  SLASH
+  SNIPE
+  SPIDER
+  SPLINTER
+  STATIC
+  STINGER
+  STRAGGLER
+  SWINDLE
+  TINKER
+  TOUCHDOWN
+  TYCOON
+  VAGABOND
+  VALKYRIE
+  VANGUARD
+  VERTIGO
+  WARDEN
+  WATCHDOG
+  WAYFINDER
+  WHISPER
+  WRAITH
+  WRONGWAY
+  ZEPHYR
+
+serial_number
+  <code>[serial_1][serial_3]-[designations]-[serial_2][serial_3][serial_4]</code>
+  <code>[serial_1][serial_3]_[designations]</code>
+  <code>[serial_1][serial_2][serial_3][serial_4]</code>
+serial_1
+  B
+  C
+  D
+  F
+  G
+  H
+  J
+  K
+  L
+  M
+  N
+  P
+  Q
+  R
+  S
+  T
+  V
+  W
+  X
+  Z
+serial_2
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  0
+  A
+  E
+  I
+  O
+  U
+  Y
+  /
+  -
+  :
+  _
+serial_3
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  0
+  D
+  H
+  K
+  L
+  P
+  Q
+  R
+  T
+  X
+  Z
+serial_4
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  0
+  _ALPHA
+  _BETA
+  _DELTA
+  _PRIME
+  _OMEGA
+  /XS
+  /XL
+  :8000
+  :9000
+  (XX)
+  
+designations
+  ALYX
+  ASTRA
+  CALDERA
+  COMET
+  CYPHER
+  DRAKE
+  FORNAX
+  GHOST
+  HUX
+  KEPLER
+  LINK
+  MENSA
+  NEBULA
+  OMEGA
+  PICARD
+  QUASAR
+  RIPLEY
+  SOLSTICE
+  TYSON
+  WREN
+  ANDROMEDA
+  AVA
+  CASSIAN
+  COSMO
+  DASH
+  ECHO
+  FUTURA
+  GROT
+  ISAAC
+  KERRIGAN
+  LYNX
+  MESSIER
+  NEO
+  ORION
+  PIRX
+  QUX
+  ROY
+  SWANN
+  UMBRA
+  ZAPP
+  ANTILLES
+  AXIS
+  CHELL
+  CRUX
+  DAX
+  ELEKTRA
+  GAFF
+  HAN
+  JET
+  KIRK
+  MACE
+  MOBY
+  NIMOY
+  PANDORA
+  PROCYON
+  REY
+  SAGAN
+  SWITCH
+  UNIX
+  ZENITH
+  ARKAS
+  BISHOP
+  CODA
+  CRYPTO
+  DECKARD
+  EQUINOX
+  GAMMA
+  HARDWIRE
+  JYNN
+  LANDO
+  MAINFRAME
+  MURPHY
+  NODE
+  PARSEC
+  PROXIMA
+  RIGEL
+  SIRIUS
+  TARKIN
+  VEGA
+  ZERO
+  ASH
+  CACHE
+  COMA
+  CYGNUS
+  DOC
+  FLASH
+  GEIGER
+  HELIO
+  KANE
+  LENA
+  MAX
+  NANO
+  NOVA
+  PHOTON
+  PYTHON
+  RIKER
+  SLOAN
+  TERMINAL
+  VOID
+  ZETA
+  
+quirks
+  Slob/gross habit
+  Obsessive hobby, lots of jargon
+  Addict
+  Narcissist
+  Overly educated, butts in constantly
+  Conspiracy theorist
+  Recovering addict
+  Religious zealot
+  Pyromaniac
+  Nihilist
+  Survivor’s guilt
+  Genius at specific skill, hopeless at anything else
+  Actually a con artist, no real expertise
+  Nasty disease, unknowingly contagious
+  Coward
+  Showboat, steals credit
+  Fragile, easy to panic
+  Reckless
+  Annoying tick
+  Creeper, constantly flirts
+  Inconvenient phobia (darkness, tight spaces, etc.)
+  Bad poet, will inflict on others
+  Prudish, hates fun
+  Compulsive helper, but unskilled
+  Radical political ideology, never shuts up about it
+  Artistic genius, but shy
+  Makes quips, calls out moves during battle
+  Polyglot, 80% knows a given language
+  Gambler, good at it
+  Gambler, terrible
+  Charismatic, will lead any attempted mutiny
+  Pessimistic, somehow always survives
+  Overly superstitious, collection of luck charms
+  Illiterate, pretends otherwise
+  Spews constant profanity
+  Painfully stupid but good-natured
+  Terrible with names, invents nicknames
+  Constant romantic entanglements
+  Spouts wise-seeming empty platitudes
+  Obscure/odd religious beliefs
+  Talks with large gestures, gregarious
+  Lazy, loves small talk
+  Too old for this shit
+  Utterly unflappable
+  War veteran, boasts about exploits
+  Never looks people in the eyes, soft-spoken
+  Periodically takes pills, never talks about it
+  Old-fashioned, complains about new things
+  Always snacking on something
+  Working lots of odd side jobs
+
+motivations
+  Secretly investigating coverup
+  Sending money home
+  In debt to loan shark/crime lord
+  Wanderlust
+  Hears call from unknown entity
+  Smuggles contraband
+  Revenge
+  Paying loved ones’ medical bills
+  Spy for rival corporation
+  Owes bail or court fines
+  Undercover secret police
+  Took money from last job and ran
+  Needs ransom for family
+  Undercover bounty hunter
+  Honorable and glorious death
+  Escaped from research facility
+  Secretly a serial killer
+  Disguised aristocrat, wants to “rough it”
+  Seeking “the edge of the black”
+  Pilgrimage
+  One last job, then I can retire
+  Needs money for debauchery
+  Restore or maintain honor
+  Outcast, nowhere else to go
+  Spread religion/ideology
+  Haunted, running from horror
+  Escaped servitude/debt contract
+  Escaped criminal
+  Ennui, hates “civilized” society
+  Searching for aliens
+  
+defining_features
+  Cybernetic left eye
+  Badly healed broken nose
+  Stick and poke tattoos
+  Unusually deep voice
+  Greasy trucker hat
+  Always sweating profusely
+  Permanent sneer (lip scar)
+  Floral turquoise aloha shirt
+  Studded fingerless gloves
+  Septum ring chained to ear
+  Tattooed-black eyes
+  Sweet, floral scent
+  Buzz-top, long-back mullet
+  Sharp, prominent canines
+  Burned-off fingerprints
+  Golden slitted cat eyes
+  Furry arms and legs
+  Always seems out of breath
+  Patched jean jacket
+  Animated lava lamp tattoo
+  Gauged ears w. skull plugs
+  Pink spiked mohawk
+  Strong, thick body odor
+  Patch-covered bandolier
+  Heavy gold Cuban links
+  Sing-song voice
+  Cybernetic plugs in neck
+  Shimmering, pointed nails
+  Beaded dreadlocks
+  Forked tongue
+  Tiny scars all over body
+  Robotic right leg
+  Earthy, alluring scent
+  Ultra-black lipstick
+  Small horns at temples
+  Smells of wet dog
+  Burned left side of face
+  Blue-tinted skin
+  Green-dyed undercut
+  Skintight red flight suit
+  Brown leather jacket
+  Barcode tattoo on left thigh
+  Silver rings on each finger
+  Fluorescent teeth
+  Smells like grapefruit rind
+  Very…slow…talker
+  Sloppily shaved, tufty head
+  Prosthetic claw right hand
+  Knee-high combat boots
+  Missing front teeth
+  Covered in small scars
+  Teeth filed to points
+  Perpetually congested
+  Neon orange cargo vest
+  Circuit schematic tattoos
+  Tight bleached cornrows
+  White fishnet tank top
+  Toothy rictus grin
+  Black collar choker
+  Always fidgeting w. a knife
+  Vanilla-cardamom scent
+  Neon green eyeliner
+  Cybernetic lower jaw
+  Faded safari shorts
+  Completely hairless
+  Stained, crooked teeth
+  Severe pitted acne scars
+  Modified pointed ears
+  Extreme vocal fry
+  Strapped into a lightweight mobility exoskeleton
+  Subdermal shoulder spikes
+  Bulging veins everywhere
+  Baggy black Zouave pants
+  Bandana-covered head
+  Missing ring fingers
+  Dirty, off-white kaftan
+  Smells of motor oil
+  Raspy, reedy voice
+  Red MA-1 bomber jacket
+  Burgundy beret
+  Heavy chain belt
+  HUD visor over left eye
+  Nasal voice, stutters
+  Port wine stain on neck
+  Zippered gimp mask
+  Large mirrored aviators
+  Torn fishnet leggings
+  Mostly-symmetrical vitiligo
+  White skull cap
+  Blood-red irises
+  Biometric readout panel embedded into wrist
+  Glowing tattoo sleeves
+  Always shivering
+  Large dent in skull
+  Snakebite piercings
+  Loose, ill-fitting skin
+  Full-body Giger-esque biomechanical tattoos
+  Synthesized voice comes from voxbox on neck
+  Skin like tanned leather
+  Blue/gold heterochromia
+
+the_deep_items
+  Battered postcard. Image is where you were born. Dated to the exact day. +1d5 Bends.
+  Grimy map of a random floor of THE DEEP.
+  1d5 EMP grenades. 5% chance they instead summon 1d5 Security Androids (pg. 10).
+  Emergency vaccsuit repair gel. Gel is day-glo green and highly reflective of IR and UV wavelengths.
+  Loaded revolver. Each round has the name of a crew member carved into it. Crew gains +1d5 Bends.
+  A corpse. It's a member of your crew, aged 1d10 years older than they currently are. +2d10 Bends.
+  Chibi-figurine datastick. Contains a 5s video showing a glimpse of the Minotaur/screams. Fear Save.
+  Plastic bag of pseudoflesh tongues. In the presence of strong radio signals they all quiver and waggle.
+  Gift shop plastic toy. 1 day study: hyper-detailed model of THE DEEP. Reveals all external entrances. Small cache of microcassettes. Contains breathy stalker footage of the area you're in. 
+  Dirty, aged ID badge. Belongs to next Ghost (pg. 12) encountered. Giving it to them soothes them.
+  Tattered remains of a book. Only the author byline is legible: you wrote it. +1d10 Bends.
+  Plastic clamshell mirror. The mirror has the word ANDROID etched around the outside edge like a halo.
+  Glass bottle. Label reads: ELIXIR OF FORGETFULNESS. A sniff or taste confirms whisky. Half full.
+  2 Dead Troubleshooters nailed to the wall with synthetic fingers. All gear looted/useless.
+  Photojournalist essay materials on the Divers, Troubleshooters and corruption at the blockade. 
+  Reading materials reveals you were interviewed 3 years ago. Bends Check.
+  2d10 PSEUDO-YUM SYNTHSTEAKS. Made of pseudoflesh. Each packet has the name of a crew member 
+  written on the back. +1d5 Bends, +1d10 if eaten before reading.
+  A tooth. It's yours. All your other teeth are accounted for. +1d5 Bends.
+  Scraps of poetry featuring a talking dog and a genetics laboratory.
+  Teenager's diary. Reading a few pages reveals it belongs to someone else in the crew. 
+  Alien-truther conspiracy theory materials. Reams and reams of the stuff.
+  Revolver with one spent shell still in the cylinder.
+  Ammunition for everyone in your party. Exactly 1 per person. The exact kind they need. Exactly.
+  Video cassette. Contains footage of the last dream you had. Bends Check.
+  Pristine map of the floor you're currently on. Directions to where you're going drawn on it.
+  Photograph of you as a child. You don't remember the event pictured. Bends Check.
+  Comms device. When activated: a familiar voice on the other end. They're trapped in a Random 
+  Location (pg. 21) and beg you to find them. When you find them: it's a duplicate of yourself.
+  "BATHSHEBA TRIUMPHANT." A paperback book you've never heard of. No one has.
+  Combat shotgun. "ANDROID DETECTOR" painted on the barrel. Two boxes of ammunition.
+  Six-pack of black spray paint: FOR EYES written on the side in yellow marker.
+  Map to location 1d10 rooms away: Contains an Artifact (pg. 62). 50% chance of encounter.
+  Android head, eyes dim, mouth moving near-silently. It's saying your name as it dies. +1d5 Bends.
+  Audio cassette. Argument between you and the crew about leaving THE DEEP amid fears of Infiltrator 
+  Androids being among your ranks. Gunfire. Screaming. Silence. All crew: +1d10 Bends.
+  Your cousin, sleeping. Kitted up as a Troubleshooter. +2d10 Bends.
+  A random Artifact (pg. 62).
+
+// Tips:
+//  - Highlight multiple lines and press Tab or Shift+Tab to indent and un-indent them all an once
+//  - You can change the URL of your generator by clicking the "settings" button in the top-right
+//  - Use this template if you want your generator to be vertically centered on the page:  perchance.org/centered-minimal#edit
+//  - Add background images, fonts, and other stuff with plugins: perchance.org/plugins
+//  - This plugin converts text into images using AI: https://perchance.org/text-to-image-plugin
+//  - Here are some templates that you can use to create nice-looking generators without learning HTML and CSS:  perchance.org/templates
+//  - Use the "layout maker" plugin to create complex layouts without learning how to code:  perchance.org/layout-maker-plugin
+//  - Here are some generators you might like to import:  perchance.org/useful-generators
+//  - Read this page after reading the tutorial:  perchance.org/examples
+//  - There's a "wrap" button in the top-right if your lines are really long. If you add   $output=[this.joinItems(" ")]   as the first item in your list, then writing [yourListName] will magically output all of the items joined together, rather than a random item from the "yourListName" list.
+//  - Ask our friendly community members if you need help:  lemmy.world/c/perchance
+// \( ﾟヮﾟ)/
+
+
+
+
