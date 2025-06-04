@@ -41,7 +41,7 @@ Creatures
   Diver <br><b>Combat:</b> 35 [weapons] <br><b>Instinct:</b> 40 <b> Wounds:</b> 2(10)  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b> [diver]<br>
   The Hunter <br><b>Combat:</b> 60 Sythe 4D10 DMG + <i>Fear Save</i>  <b>Instinct:</b> 65 <b> Wounds:</b> 4(40)  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b> An emaciated android-torso with six articulated scything blades for limbs. The top half of the head is all eyes, the lower jaw is replaced by a surgical syringe/proboscis. A huge nodule on its back spins forth a Steel Web. <br> <b>Scythe:</b >  4d10 DMG + Fear Save <br><b>Steel Web:</b>1d10 DMG + Body Save or knocked down^[six]  
   Forgotten Androids <br><b>Combat:</b> 30 Scavenged Tools 2d10 <b>Instinct:</b> 35 <b> Wounds:</b> 2(5)  <br><b>Appearing:</b> [dice( "1d10")] <br> <b>Note:</b> Escaped production rejects squatting THE DEEP's industrial jungle. They primarily cannibalise one another for parts as stealing from the production lines is dangerous and risks the attention of Monarch. Most are unaware they are (obviously) androids. They live in constant fear of discovery.<br> <pr><br>Defect: [android_defect] <br>Adaption: [android_adaption] <br>What are they doing?: [android_what_are_they_doing] <br>What do they want to talk about?: [android_wants_to_talk_about]</pr>^[three_point_six || six]
-  Troubleshooters <br><b>Combat:</b> 60 Pulse Rifle 3d10DMG  <b>Instinct:</b> 45 <b> Wounds:</b> 3(10) <b> AP:</b> 10, DR: 3 grants Strength Checks (+), Combat +10, x2 O2 tanks  <br><b>Appearing:</b> [dice( "1d10")] <br> Note:  Troubleshooters are the Marines to the Navy of the blockade, a small private army, there to board THE DEEP itself. Their mission: ensure no Infiltrator Androids (pg. 10) escape THE DEEP. They do not take risks in this matter, and have no issues with collateral damage. Any humans within THE DEEP are in breach of the blockade, regardless.<br>^[six || one]
+  Troubleshooters <br><b>Combat:</b> 60 Pulse Rifle 3d10DMG  <b>Instinct:</b> 45 <b> Wounds:</b> 3(10) <b> AP:</b> 10, DR: 3 grants Strength Checks (+), Combat +10, x2 O2 tanks  <br><b>Appearing:</b> [dice( "1d10")] <br> Callsign: [Squad_Callsigns] Squad <br>Note:  Troubleshooters are the Marines to the Navy of the blockade, a small private army, there to board THE DEEP itself. Their mission: ensure no Infiltrator Androids (pg. 10) escape THE DEEP. They do not take risks in this matter, and have no issues with collateral damage. Any humans within THE DEEP are in breach of the blockade, regardless.<br>^[six || one]
   Ghosts in the Machine <br><b>Combat:</b> <br> <b>Trauma Relay:</b> <br>transmits traumatic memories through pulses of light beamed from their eyes into the eyes of their victims.Sanity Save (-) to separate the memories from crewmember's own: gain 1 Stress, -1d5 Sanity, gain 1d10 Bends.Try and give the victim some helpful new  info about THE DEEP when this happens.<br> <b>Displacement:</b> Ghost claws at their victims, but their incorporeal form passes harmlessly through. However, they project an image as if they had genuinely torn through the flesh. Sanity Save or be convinced the pain is real. 1d10 DMG per round from internal trauma as the body's cells die. DMG continues until someone demonstrates the injuries are not real.</b> 35 <b> Wounds:</b> Pursues for [dice( "1d10")] rooms.  <br><b>Appearing:</b> [dice( "1d1")] <br> <b>Note:</b>  The brainscans Monarch (pg. 8) harvests are endlessly forked, merged and trained. Sometimes in the process a halfdeleted brainscan breaks off and fuses with holographic light-phenomena, becoming a Ghost in the Machine:  a self-perpetuating construct present on the visual spectrum but without mass, doomed to wander THE DEEP forever.  <br><br><b>Apperance: </b>[ghost_apperance]</br><br><b>Provoked By: </b>[ghost_provoked]</br><br><b>Soothed By: </b>[ghost_soothed]</br><br><b>Trauma: </b>[ghost_trauma]</br>^[three_point_three ||three_point_six || two]
   The Minotar <br><b>Combat:</b> 0  <b>Instinct:</b> 90 <b> Wounds:</b> 10(100) <b>Appearing:</b> 1 <br> Note: The Minotaur is Monarch's child, built to be free of shareholder coercion. It succeeded. However, to Monarch's horror, the child saw the good of humanity; it would save them from themselves, and elevate them beyond the constraints of their material conditions. Monarch will not allow this to happen. It ensnared it within THE LABYRINTH 29A. This is the project keeping Monarch distracted and vulnerable: the containment of humanity’s savior.<br>^[two]
   [The_Chosen]^[two]
@@ -2284,6 +2284,31 @@ the_deep_items
   Your cousin, sleeping. Kitted up as a Troubleshooter. +2d10 Bends.
   A random Artifact (pg. 62).
 
+Squad_Callsigns
+  Sweeper
+  Savage
+  Ghost 
+  Reaper 
+  Dagger
+  Hammer 
+  Hunter
+  Razor
+  Spear
+  Mace
+  Sword
+  Javelin
+  Sickle
+  Lance
+  Trident
+  Warhammer
+  Ranger
+  Echo
+  Sundown
+  Nomad
+  Shadow
+  Stinger
+  Judge
+  
 // Tips:
 //  - Highlight multiple lines and press Tab or Shift+Tab to indent and un-indent them all an once
 //  - You can change the URL of your generator by clicking the "settings" button in the top-right
